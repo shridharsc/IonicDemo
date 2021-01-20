@@ -1,0 +1,100 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-card>
+      <form [formGroup]="form" (ngSubmit)="formSubmit()" style="padding: 40px;">
+        <ion-row>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label>First Name :</ion-label>
+              <ion-input type="text" formControlName="firstName" [(ngModel)]="Firstname" name="title"></ion-input>
+            </ion-item>
+            <div *ngIf="errorStartDate && f.firstName.errors">
+
+              <ion-label color="danger">FirstName required</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label>Last Name :</ion-label>
+              <ion-input type="text" formControlName="lastName" [(ngModel)]="Lastname" name="title"></ion-input>
+            </ion-item>
+            <div *ngIf="errorStartDate && f.lastName.errors">
+              <ion-label color="danger">lastName required</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label>Address :</ion-label>
+              <ion-input type="text" formControlName="address" [(ngModel)]="Address" name="title"></ion-input>
+            </ion-item>
+            <div *ngIf="errorStartDate && f.address.errors">
+              <ion-label color="danger">address required</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+               <ion-item>
+                <ion-label>Phone number :</ion-label>
+                <ion-input type="number" formControlName="number" [(ngModel)]="Number" name="title"></ion-input>
+              </ion-item>
+              <div *ngIf="errorStartDate && f.number.errors">
+                <ion-label color="danger">Phone number required</ion-label>
+              </div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label>Email :</ion-label>
+              <ion-input type="email" formControlName="email" [(ngModel)]="Email" name="title"></ion-input>
+            </ion-item>
+            <div *ngIf="errorStartDate && f.email.errors">
+              <ion-label color="danger">Email required</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label>Pincode :</ion-label>
+              <ion-input type="number" formControlName="pincode" [(ngModel)]="pinCode" name="title"></ion-input>
+            </ion-item>
+            <div *ngIf="errorStartDate && f.pincode.errors">
+              <ion-label color="danger">pincode required</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-button type="submit" class="ion-text-center" style="margin-left: 40%;">
+          Add
+        </ion-button>
+        <ion-button type="reset" class="ion-text-center" (click)="reset()">
+          Clear
+        </ion-button>
+        <ion-button type="reset" class="ion-text-center" (click)="Editform()">
+          Edit
+        </ion-button>
+      </form>
+    </ion-card>
+
+    <ion-row>
+      <ion-col>S.No</ion-col>
+      <ion-col>FirstName</ion-col>
+      <ion-col>LastName</ion-col>
+      <ion-col>Address</ion-col>
+      <ion-col>Number</ion-col>
+      <ion-col>Email</ion-col>
+      <ion-col>Pincode</ion-col>
+      <ion-col>Edit</ion-col>
+      <ion-col>Delete</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of array; let i = index">
+      <ion-col>{{ i + 1 }}</ion-col>
+      <ion-col>{{ item.firstName }}</ion-col>
+      <ion-col>{{ item.lastName }}</ion-col>
+      <ion-col>{{ item.address }}</ion-col>
+      <ion-col>{{ item.number }}</ion-col>
+      <ion-col>{{ item.email }}</ion-col>
+      <ion-col>{{ item.pincode }}</ion-col>
+      <ion-col (click)="edit(item.email)"><ion-icon name="create-outline"></ion-icon></ion-col>
+      <ion-col (click)="delete(i)"><ion-icon name="trash-outline"></ion-icon></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

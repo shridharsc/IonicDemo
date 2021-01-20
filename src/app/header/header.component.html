@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title routerLink="/home" style="display: inline-block;">
+      Ionic
+    </ion-title>
+<ion-nav>
+  <ion-list class="list-content">
+    <ion-item (click)="openRoute()">Home</ion-item>
+    <ion-item routerLink="/about">About</ion-item>
+    <ion-item routerLink="/contact">Contact</ion-item>
+    <ion-item>Menu Item</ion-item>
+  </ion-list>
+</ion-nav>
+</ion-toolbar>
+</ion-header>

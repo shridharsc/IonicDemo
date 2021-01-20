@@ -1,0 +1,101 @@
+
+<ion-content style="overflow-x: scroll;overflow-y: hidden;">
+   <ion-grid>
+    <!-- <ion-row>
+      <ion-col size-md="6" size-xs="12">
+           <ion-card>
+             <img src="/assets/img-9.jpg"/>
+             <ion-card-header>card1</ion-card-header>
+             <ion-card-content>
+               Keep close to Nature's heart... and break clear away, once in awhile,
+               and climb a mountain or spend a week in the woods. Wash your spirit clean.
+             </ion-card-content>
+           </ion-card>
+      </ion-col>
+      <ion-col size-md="6" size-xs="12">
+       <ion-card>
+         <img src="/assets/img-8.jpg"/>
+         <ion-card-header>card2</ion-card-header>
+         <ion-card-content>
+           Keep close to Nature's heart... and break clear away, once in awhile,
+           and climb a mountain or spend a week in the woods. Wash your spirit clean.
+         </ion-card-content>
+       </ion-card>
+       </ion-col>
+    </ion-row> -->
+     <ion-row>
+       <ion-col size-md="6" size-xs="12">
+            <ion-card>
+              <img src="/assets/img-9.jpg"/>
+              <ion-card-header>card1</ion-card-header>
+              <ion-card-content>
+                Keep close to Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
+              <!-- <ion-button (click)="openRoute()" [routerLink]="['home']" routerDirection="forward">Demo</ion-button> -->
+            </ion-card>
+       </ion-col>
+        <ion-col size-md="6" size-xs="12">
+          <ion-card>
+            <img src="/assets/img-8.jpg"/>
+            <ion-card-header>card3</ion-card-header>
+            <ion-card-content>
+              Keep close to Nature's heart... and break clear away, once in awhile,
+              and climb a mountain or spend a week in the woods. Wash your spirit clean.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+     </ion-row>
+
+     <ion-row>
+        <ion-col size="12">
+          <ion-slides class="slide-padding" pager="false">
+            <ion-slide *ngFor="let story of topStories">
+              <div class="container" style="width: 50%;">
+                  <ion-img src="/assets/{{story.picture}}.jpg"></ion-img>
+                  <h2 class="slidetitle">
+                      <span class="block">{{story.title}}</span>
+                  </h2>
+                  <p class="author">By {{story.author}}</p>
+              </div>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+     </ion-row>
+     
+     <ion-row>
+      <ion-col size-md="4" size-xs="12">
+           <ion-card>
+             <img src="/assets/img-9.jpg"/>
+             <ion-card-header>card1</ion-card-header>
+             <ion-card-content>
+               Keep close to Nature's heart... and break clear away, once in awhile,
+               and climb a mountain or spend a week in the woods. Wash your spirit clean.
+             </ion-card-content>
+             <!-- <ion-button (click)="openRoute()" [routerLink]="['home']" routerDirection="forward">Demo</ion-button> -->
+           </ion-card>
+      </ion-col>
+      <ion-col size-md="4" size-xs="12">
+       <ion-card>
+         <img src="/assets/img-4.jpg" style="height: 280px;width: 422px;"/>
+         <ion-card-header>card2</ion-card-header>
+         <ion-card-content>
+           Keep close to Nature's heart... and break clear away, once in awhile,
+           and climb a mountain or spend a week in the woods. Wash your spirit clean.
+         </ion-card-content>
+       </ion-card>
+       </ion-col>
+       <ion-col size-md="4" size-xs="12">
+         <ion-card>
+           <img src="/assets/img-8.jpg"/>
+           <ion-card-header>card3</ion-card-header>
+           <ion-card-content>
+             Keep close to Nature's heart... and break clear away, once in awhile,
+             and climb a mountain or spend a week in the woods. Wash your spirit clean.
+           </ion-card-content>
+         </ion-card>
+       </ion-col>
+    </ion-row>
+
+   </ion-grid>
+</ion-content>
